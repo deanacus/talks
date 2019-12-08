@@ -14,7 +14,7 @@ export const TalksList = ({talks}) => {
 }
 
 TalksList.propTypes = {
-  talk: PropTypes.arrayOf({
+  talks: PropTypes.arrayOf(PropTypes.shape({
     /**
      * Unique ID for the talk
      */
@@ -43,5 +43,5 @@ TalksList.propTypes = {
      * A link to the slide deck or presentation files
      */
     link: PropTypes.string,
-  }).isRequired,
+  })).isRequired,
 }
